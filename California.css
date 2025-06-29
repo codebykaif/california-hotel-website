@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Funnel Display", sans-serif;
+}
+.main-box{
+   background-image: url('California.jpg');
+    background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+.btn_one {
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    position: absolute;
+    left: 16px;
+    line-height: 60px;
+}
+.slidebar_menu{
+    position: fixed;
+    left: -300px;
+    height: 100vh;
+    width: 300px;
+    background-color: rgba(33, 33, 216, 0.22);
+    box-shadow: 0 0 8px rgba(255,255,255, 0.5);
+    transition: all 0.3s linear;
+    
+}
+.slidebar_menu .logo{
+    position: absolute;
+    width: 100%;
+    font-size: 20px;
+    /* line-height: 60px; */
+  box-shadow: 0 2 4px rgba(255,255,255,0.5);
+}
+.slidebar_menu .logo a{
+    font-family: "Birthstone", cursive;
+    font-weight: 900;
+    font-style: normal;
+    position: absolute;
+    left: 100px;
+    text-decoration: none;
+    font-size: 40px;
+    background: linear-gradient(to left,aqua, #77BA45);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: blink 1.5s infinite;
+}
+
+    @keyframes blink {
+    100% { filter: brightness(100%); }
+    50% { filter: brightness(80%); }
+    }
+.btn_one:hover{
+    transition: 1s linear;
+    color: black;
+    font-size:30px ;
+}
+.btn_one:active{
+    transform: rotate(190deg);
+    transition: 0.50s all ease-in;
+}
+.slidebar_menu .btn_two{
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    left: 260px;
+    top: 10px;
+    opacity: 1;
+}
+.slidebar_menu .menu{
+    position: absolute;
+    width: 100%;
+    top: 60px;
+}
+.slidebar_menu .menu li{
+    
+    margin-top: 6px;
+    padding: 10px 20px;
+}
+.slidebar_menu .menu i,a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+.slidebar_menu .menu i{
+    padding-right: 10px;
+}
+.slidebar_menu .social-media{
+    color: white;
+    opacity: 1;
+    position: absolute;
+    left: 80px;
+    bottom: 60px;
+   
+}
+.slidebar_menu .social-media i{
+    padding: 5px;
+    /* gap: 5px; */
+}
+.fa-instagram{
+    background: linear-gradient(to bottom left,
+    #feda75,  
+    #fa7e1e,  
+    #d62976,  
+    #962fbf,  
+    #4f5bd5 
+    );  
+    /* -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    border-radius: 14px;
+}
+.fa-facebook{
+    background: linear-gradient(to bottom left 
+     #3b5998,  /* Classic Facebook Blue */
+    #1877f2,  /* Official Facebook Blue */
+    #1e4e9b   /* Slightly darker blue */);
+    background: white !important;
+    border-radius: 50px;
+    display: inline-block;
+    
+}
+.fa-youtube{
+    font-weight: 600;
+}
+#check{
+    display: none;
+}
+.slidebar_menu .menu li:hover{
+    opacity: 0.5;
+    transition: 0.20s linear;
+    box-shadow: 0 0 6px (rgba(156, 223, 135, 0.5));
+    border: 1px solid black;
+    /* background-color: #0bcee8; */
+    color: #000;
+}
+.slidebar_menu .menu i a:hover{
+    color: #000;
+}
+.slidebar_menu .btn_two:hover{
+    transition: 1s linear;
+    color: black;
+    font-size:35px ;
+}
+#check:checked ~ .slidebar_menu{
+    left: 0;
+    transition: 0.70s linear;
+}
+#check:checked ~ .btn_one i{
+    opacity: 0;
+}
+#check:checked ~ .slidebar_menu .btn_two i{
+    opacity: 1;
+}
+.main-container{
+    position: absolute;
+    left: 35%;
+    top: 10%;
+    padding: 40px;
+    width: 65%;
+    color: white;
+}
+.hero-text h1{
+    text-shadow: 1px 1px 3px #000;
+    font-size: 600;
+    margin-bottom: 10px;
+    background: linear-gradient(to left, #00c6ff, #0072ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: california 1s all infinite;
+}
+@keyframes california{
+    100%{filter:brightness(100%);}
+    50%{filter: brightness(40%);}
+}
+.hero-text  p{
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 3px #000;
+    font-size: 20px;
+    /* background: linear-gradient(to right, #7E718E, #8E7E71, );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 1; */
+
+}
+.hero-text button{
+    width: 100px;
+    height: 35px;
+    padding: auto;
+    border-radius: 5px;
+    background-color: #ff4b2b;
+    border: none;
+    box-shadow: 0 0 4px rgba(0, 0, 0,0.5);
+    color: white;
+    margin-top: 15px;
+}
+.hero-text button:hover{
+    background-color: #d7410f;
+    cursor: pointer;
+    transition: 0.20s linear;
+}
+.feauter{
+    display: flex;
+    gap: 20px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+.card{
+    width: 160px;
+    height: 125px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(12px);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(255,255,255, 0.4);
+    transition: transform 0.3s;
+}
+.card i{
+    font-size: 20px;
+    margin-top: 20px;
+}
+.card:hover{
+    transform: scale(1.05);
+}
